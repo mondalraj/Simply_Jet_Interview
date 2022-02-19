@@ -37,7 +37,7 @@ const Navbar = () => {
 
             {/* Mobile Navbar */}
             <nav className='flex md:hidden fixed top-0 left-0 right-0 justify-between items-center z-10 bg-[#131313] py-5 px-5'>
-                <div className='navbar_logo text-4xl'>
+                <div className='navbar_logo text-3xl'>
                     UNX
                 </div>
                 {
@@ -54,7 +54,9 @@ const Navbar = () => {
                         onClick={() => setMenuClosed(!menuClosed)}
                     />
                 }
-                <div className={menuClosed ? 'hidden' : 'flex' + ' absolute h-screen top-full left-0 right-0 bg-black flex-col justify-center gap-20 items-center text-lg py-10 px-5'} >
+                <div
+                    className={menuClosed ? 'hidden ' : 'flex ' +
+                        'absolute h-screen top-full left-0 right-0 z-10 bg-black flex-col justify-center gap-16 items-center text-lg px-5'} >
                     <div className='cursor-pointer' onClick={() => setMenuClosed(true)}>
                         Products
                     </div>
