@@ -15,7 +15,7 @@ export default function Home() {
     }
   }
   return (
-    <div>
+    <div className='relative'>
       <Head>
         <title>UNX</title>
         <meta name="description" content="Simply Jet Interview Project" />

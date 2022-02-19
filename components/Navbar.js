@@ -40,17 +40,21 @@ const Navbar = () => {
                 <div className='navbar_logo text-4xl'>
                     UNX
                 </div>
-                <MenuIcon
-                    fontSize="large"
-                    className={menuClosed ? '' : 'hidden' + ' cursor-pointer'}
-                    onClick={() => setMenuClosed(!menuClosed)}
-                />
-                <CloseIcon
-                    fontSize="large"
-                    className={menuClosed ? 'hidden' : '' + ' cursor-pointer'}
-                    onClick={() => setMenuClosed(!menuClosed)}
-                />
-                <div className={menuClosed ? 'hidden':'flex' + ' absolute h-screen top-full left-0 right-0 bg-black flex-col justify-center gap-20 items-center text-lg py-10 px-5'} >
+                {
+                    menuClosed ? <MenuIcon
+                        fontSize="large"
+                        className='cursor-pointer'
+                        onClick={() => setMenuClosed(!menuClosed)}
+                    /> : " "
+                }
+                {
+                    menuClosed ? " " : <CloseIcon
+                        fontSize="large"
+                        className='cursor-pointer'
+                        onClick={() => setMenuClosed(!menuClosed)}
+                    />
+                }
+                <div className={menuClosed ? 'hidden' : 'flex' + ' absolute h-screen top-full left-0 right-0 bg-black flex-col justify-center gap-20 items-center text-lg py-10 px-5'} >
                     <div className='cursor-pointer' onClick={() => setMenuClosed(true)}>
                         Products
                     </div>
